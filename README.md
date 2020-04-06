@@ -1,2 +1,2 @@
-# contests
-contests
+# Contests
+Contests

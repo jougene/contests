@@ -1,0 +1,26 @@
+{
+  "name": "contests",
+  "version": "1.0.0",
+  "description": "contests",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "generate": "ls -al"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jougene/contests.git"
+  },
+  "keywords": [
+    "contests"
+  ],
+  "author": "Eugene Sinitsyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jougene/contests/issues"
+  },
+  "homepage": "https://github.com/jougene/contests#readme",
+  "dependencies": {
+    "jest": "^25.2.7"
+  }
+}
