@@ -1,4 +1,4 @@
-const { ::name:: } = require('../::challenge::');
+const { rotLeft } = require('../ctci-array-left-rotation');
 
 let dataProvider = [
     [1, [1,2], 2],
@@ -6,7 +6,7 @@ let dataProvider = [
 ];
 
 test.each(dataProvider)('dataset (n = %i | s = %s | expected = %i)', (n, s, expected) => {
-    let res = ::name::(n, s);
+    let res = rotLeft(n, s);
 
     expect(res).toBe(expected);
 });

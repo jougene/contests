@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 3 ]
+    then
+cat << HELP
+Not enough arguments.
+Usage:
+    bin/generate <resourse> <name>
+Ex. 
+    bin/generate hackerrank counting-valleys countingValleys
+HELP
+    exit 1
+fi
+
+RESOURSE=$1
+CHALLENGE=$2
+FUNCTION_NAME=$3
+
+echo -e "\e[32m Creating new excersize $CHALLENGE"
+echo
+
+SOLUTION_FILENAME="./${RESOURSE}/${CHALLENGE}.js"
+TEST_FILENAME="./${RESOURSE}/tests/${CHALLENGE}.test.js"
+
+cat ./templates/solution.t |\
+    sed "s/::challenge::/${CHALLENGE}/g" |\
+    sed "s/::name::/${FUNCTION_NAME}/g" > ${SOLUTION_FILENAME}
+
+echo -e "\e[32m - ${SOLUTION_FILENAME} created"
+
+cat ./templates/test.t |\
+    sed "s/::challenge::/${CHALLENGE}/g" |\
+    sed "s/::name::/${FUNCTION_NAME}/g" > ${TEST_FILENAME}
+
+echo -e "\e[32m - ${TEST_FILENAME} created"
