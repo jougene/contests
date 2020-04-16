@@ -11,5 +11,5 @@ let dataProvider = [
 test.each(dataProvider)('dataset (n = %i | ar = %p | expected = %i)', (n, ar, expected) => {
     let res = sockMerchant(n, ar);
 
-    expect(res).toBe(expected);
+    expect(res).toStrictEqual(expected);
 });

@@ -10,5 +10,5 @@ let dataProvider = [
 test.each(dataProvider)('dataset (s = %s | n = %i | expected = %i)', (n, s, expected) => {
     let res = repeatedString(n, s);
 
-    expect(res).toBe(expected);
+    expect(res).toStrictEqual(expected);
 });

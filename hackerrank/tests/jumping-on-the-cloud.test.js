@@ -10,5 +10,5 @@ let dataProvider = [
 test.each(dataProvider)('dataset (c = %i | expected = %i)', (c, expected) => {
     let res = jumpingOnClouds(c);
 
-    expect(res).toBe(expected);
+    expect(res).toStrictEqual(expected);
 });

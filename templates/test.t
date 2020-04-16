@@ -8,5 +8,5 @@ let dataProvider = [
 test.each(dataProvider)('dataset (n = %i | s = %s | expected = %i)', (n, s, expected) => {
     let res = ::name::(n, s);
 
-    expect(res).toBe(expected);
+    expect(res).toStrictEqual(expected);
 });
