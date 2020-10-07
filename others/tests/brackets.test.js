@@ -1,4 +1,5 @@
 const { brackets } = require('../brackets');
+const { bracketsOnStack } = require('../bracketsOnStack');
 
 let dataProvider = [
     ['()', true],
@@ -20,6 +21,8 @@ let dataProvider = [
 
 test.each(dataProvider)('dataset "%O" | expected = %s', (expr, expected) => {
     let res = brackets(expr);
+    let resStack = bracketsOnStack(expr);
 
     expect(res).toStrictEqual(expected);
+    expect(resStack).toStrictEqual(expected);
 });
