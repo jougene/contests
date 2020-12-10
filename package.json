@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/jougene/contests#readme",
   "dependencies": {
-    "jest": "^25.2.7"
+    "jest": "^25.2.7",
+    "lodash": "^4.17.20"
   }
 }
